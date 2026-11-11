@@ -5,33 +5,34 @@ import { ChevronRight, X, ShieldCheck, TrendingUp, Building2, Calendar } from 'l
 const METRICS_DATA: MetricItem[] = [
   {
     id: 'assets',
-    value: '$450M+',
-    label: 'Assets Under Dev',
+    value: '₦720B+',
+    label: 'Capital Under Dev',
     subtext: 'Institutional Real Estate & Infrastructure',
     description:
-      'Capital deployed across prime urban centers in Europe, Sub-Saharan Africa, and the Middle East, backed by sovereign funds, pension consortia, and private family offices.',
+      'Capital deployed across prime urban centers in Nigeria (Lagos, Abuja) and strategic expansion corridors in Dubai and London, backed by sovereign institutions, pension consortia, and private family offices.',
     breakdown: [
-      { label: 'Commercial & Mixed-Use Towers', value: '$220M' },
-      { label: 'High-Tech Logistics & Industrial Parks', value: '$145M' },
-      { label: 'Civic Infrastructure & Public Plazas', value: '$85M' },
+      { label: 'Commercial & Mixed-Use Towers', value: '₦350B' },
+      { label: 'High-Tech Logistics & Industrial Parks', value: '₦230B' },
+      { label: 'Civic Infrastructure & Public Concessions', value: '₦140B' },
     ],
   },
   {
     id: 'sites',
-    value: '18+',
+    value: '24+',
     label: 'Active Sites',
     subtext: 'Concurrent Developments',
     description:
-      'Eighteen active urban masterplans and construction sites managed under ISO 9001 quality frameworks and rigorous structural engineering oversight.',
+      'Twenty-four active urban masterplans and construction sites managed under ISO 9001 frameworks and rigorous structural engineering oversight.',
     breakdown: [
-      { label: 'London Metropolitan Area (UK)', value: '6 Sites' },
-      { label: 'Lagos Coastal & Free Zone (Nigeria)', value: '7 Sites' },
-      { label: 'Dubai & DIFC Strategic Corridor (UAE)', value: '5 Sites' },
+      { label: 'Lagos Free Zone & Coastal Corridors (Nigeria)', value: '11 Sites' },
+      { label: 'Abuja Federal Capital Territory (Nigeria)', value: '6 Sites' },
+      { label: 'Dubai & DIFC Strategic Corridor (UAE Expansion)', value: '4 Sites' },
+      { label: 'London Institutional Liaison Sites (UK)', value: '3 Sites' },
     ],
   },
   {
     id: 'delivery',
-    value: '98.4%',
+    value: '98.6%',
     label: 'On-Time Delivery',
     subtext: 'Milestone Execution Rate',
     description:
@@ -44,15 +45,15 @@ const METRICS_DATA: MetricItem[] = [
   },
   {
     id: 'pipeline',
-    value: '2026',
-    label: 'Active Pipeline',
+    value: '2026–30',
+    label: 'Active Horizon',
     subtext: 'Generational Horizon Projects',
     description:
       'Committed delivery cycles throughout the 2026–2030 programmatic horizon, prioritizing net-zero carbon concrete, passive bioclimatic envelopes, and high-density urban transit nodes.',
     breakdown: [
-      { label: 'Under Construction (Phase Completion)', value: '4 Major Hubs' },
-      { label: 'Permitted & Groundbreaking (2026)', value: '6 Developments' },
-      { label: 'Capital Allocation Target (2026–2028)', value: '$320M Target' },
+      { label: 'Under Construction (Phase Completion)', value: '6 Major Hubs' },
+      { label: 'Permitted & Groundbreaking (2026)', value: '8 Developments' },
+      { label: 'Capital Allocation Target (2026–2028)', value: '₦550B Target' },
     ],
   },
 ];
@@ -79,18 +80,61 @@ export function Philosophy() {
         {/* Section Header */}
         <div className="flex items-center gap-3 text-[11px] font-medium tracking-[0.25em] text-[#6B7280] uppercase mb-8">
           <span className="text-[#0A0A0A] font-bold">—</span>
-          <span>02 / PHILOSOPHY & MANDATE</span>
+          <span>02 / THE INFINITY MANDATE & PHILOSOPHY</span>
         </div>
 
         {/* Mission Statement in Editorial Italic / Serif-Accented Font */}
-        <div className="max-w-4xl mb-16 sm:mb-24">
+        <div className="max-w-4xl mb-12">
           <blockquote className="font-['Cormorant_Garamond'] text-3xl sm:text-4xl lg:text-5xl italic font-normal text-[#0A0A0A] leading-[1.3] text-balance">
-            “We operate at the nexus of monumental architecture, patient institutional capital, and transformative infrastructure. Each development is conceived as an enduring civic landmark engineered for generational resilience.”
+            “Our emblem is the architectural symbol of infinity (∞)—an unbroken continuum of monumental engineering, patient institutional capital, and generational value creation. Rooted in Nigeria with expansive horizons across Dubai and beyond, we build enduring landmarks that outlive generations.”
           </blockquote>
-          <div className="mt-6 flex items-center gap-4 text-xs font-mono tracking-widest uppercase text-[#6B7280]">
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-xs font-mono tracking-widest uppercase text-[#6B7280]">
             <span className="font-bold text-[#0A0A0A]">ZANAARI GROUP MANDATE</span>
             <span>·</span>
-            <span>DIVISION OF CAPITAL & WORKS</span>
+            <span>HEADQUARTERED IN NIGERIA // EXPANDING GLOBALLY</span>
+            <span>·</span>
+            <span className="text-[#0A0A0A] font-semibold">THE INFINITY PRINCIPLE (∞)</span>
+          </div>
+        </div>
+
+        {/* The Infinity Concept Architectural Card */}
+        <div className="p-6 sm:p-8 bg-[#F9F9FB] border border-[#E5E7EB] mb-16 sm:mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+            <div className="border-b md:border-b-0 md:border-r border-[#E5E7EB] pb-4 md:pb-0 md:pr-6">
+              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-wider block mb-1">
+                01. THE INFINITE CONTINUUM (∞)
+              </span>
+              <h4 className="font-['Syne'] font-bold text-sm uppercase text-[#0A0A0A] mb-2">
+                Unbroken Value Lifecycle
+              </h4>
+              <p className="text-[#4B5563] leading-relaxed">
+                The interlocking geometry represents perpetual lifecycle resilience. Every development is designed to generate compound economic and social returns across 60+ year institutional horizons.
+              </p>
+            </div>
+
+            <div className="border-b md:border-b-0 md:border-r border-[#E5E7EB] pb-4 md:pb-0 md:pr-6">
+              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-wider block mb-1">
+                02. NIGERIAN FOUNDATION
+              </span>
+              <h4 className="font-['Syne'] font-bold text-sm uppercase text-[#0A0A0A] mb-2">
+                Domestic Sovereign Power
+              </h4>
+              <p className="text-[#4B5563] leading-relaxed">
+                Firmly anchored in Lagos and Abuja, driving industrial logistics, ports, and commercial skylines that power the powerhouse economy of Sub-Saharan Africa in Nigerian Naira.
+              </p>
+            </div>
+
+            <div>
+              <span className="font-mono text-[10px] text-[#6B7280] uppercase tracking-wider block mb-1">
+                03. GLOBAL GROUP EXPANSION
+              </span>
+              <h4 className="font-['Syne'] font-bold text-sm uppercase text-[#0A0A0A] mb-2">
+                Dubai & Beyond
+              </h4>
+              <p className="text-[#4B5563] leading-relaxed">
+                As Zanaari Projects expands into Zanaari Group Limited, our Dubai and international offices bridge capital conduits, cutting-edge engineering consortia, and cross-border trade.
+              </p>
+            </div>
           </div>
         </div>
 

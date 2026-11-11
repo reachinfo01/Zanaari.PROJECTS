@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Project } from './types/portfolio';
 import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
@@ -6,10 +6,12 @@ import { Hero } from './components/Hero';
 import { Philosophy } from './components/Philosophy';
 import { Projects } from './components/Projects';
 import { Capabilities } from './components/Capabilities';
+import { FoundersSection } from './components/FoundersSection';
 import { SocialsSection } from './components/SocialsSection';
 import { InquirySection } from './components/InquirySection';
 import { InquiryModal } from './components/InquiryModal';
 import { ProjectModal } from './components/ProjectModal';
+import { InfinityLogoShowcase } from './components/InfinityLogoShowcase';
 import { Footer } from './components/Footer';
 import { FloatingSocials } from './components/FloatingSocials';
 
@@ -17,6 +19,7 @@ export default function App() {
   const [showPreloader, setShowPreloader] = useState(true);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
+  const [logoShowcaseOpen, setLogoShowcaseOpen] = useState(false);
   const [preselectedScope, setPreselectedScope] = useState('');
 
   // Handle inquiry trigger with preselected project
@@ -45,36 +48,42 @@ export default function App() {
       )}
 
       {/* 2. Sticky Navigation Bar */}
-      <Navbar onOpenInquire={handleOpenGeneralInquiry} />
+      <Navbar
+        onOpenInquire={handleOpenGeneralInquiry}
+        onOpenLogoShowcase={() => setLogoShowcaseOpen(true)}
+      />
 
       {/* Main Content Sections */}
       <main className="flex-1">
         {/* 3. Hero Section */}
         <Hero onExploreClick={scrollToProjects} />
 
-        {/* 4. Philosophy & Impact Metrics */}
+        {/* 4. Philosophy & The Infinity Mandate */}
         <Philosophy />
 
-        {/* 5. Selected Projects (Asymmetric Editorial Grid) */}
+        {/* 5. Selected Projects (Asymmetric Editorial Grid with Naira Valuations) */}
         <Projects onSelectProject={(project) => setSelectedProject(project)} />
 
         {/* 6. Sectors & Capabilities (Expandable 01-04 Accordion) */}
         <Capabilities />
 
-        {/* 7. Official Socials & Direct Lines */}
+        {/* 7. The Six Founders (Founding Directorate with Photo Slots) */}
+        <FoundersSection />
+
+        {/* 8. Official Socials & Direct Lines */}
         <SocialsSection />
 
-        {/* 8. Interactive Inquiry Section */}
+        {/* 9. Interactive Inquiry Section */}
         <InquirySection initialProjectScope={preselectedScope} />
       </main>
 
-      {/* 9. Floating Quick-Access Socials & Messaging Dock */}
+      {/* 10. Floating Quick-Access Socials & Messaging Dock */}
       <FloatingSocials />
 
-      {/* 10. Comprehensive Footer with Live Global Clocks */}
+      {/* 11. Comprehensive Footer with Live Global Clocks */}
       <Footer />
 
-      {/* Modals */}
+      {/* Modals & Overlays */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
@@ -85,6 +94,11 @@ export default function App() {
         isOpen={inquiryModalOpen}
         onClose={() => setInquiryModalOpen(false)}
         preselectedScope={preselectedScope}
+      />
+
+      <InfinityLogoShowcase
+        isOpen={logoShowcaseOpen}
+        onClose={() => setLogoShowcaseOpen(false)}
       />
     </div>
   );

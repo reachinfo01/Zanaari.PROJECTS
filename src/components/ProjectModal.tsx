@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Project } from '../types/portfolio';
 import { X, ArrowRight, ShieldCheck, MapPin, Layers, Award } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -22,7 +23,8 @@ export function ProjectModal({ project, onClose, onInquireAboutProject }: Projec
 
   if (!project) return null;
 
-  const currentImg = imgError ? project.fallbackImage : project.imageSrc;
+  const rawImg = imgError ? project.fallbackImage : project.imageSrc;
+  const currentImg = getAssetUrl(rawImg);
 
   return (
     <div

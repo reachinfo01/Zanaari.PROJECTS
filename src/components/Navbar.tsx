@@ -5,9 +5,10 @@ import { InstagramIcon, WhatsAppIcon, SnapchatIcon, LinkedInIcon, XTwitterIcon }
 
 interface NavbarProps {
   onOpenInquire: () => void;
+  onOpenLogoShowcase?: () => void;
 }
 
-export function Navbar({ onOpenInquire }: NavbarProps) {
+export function Navbar({ onOpenInquire, onOpenLogoShowcase }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [socialsDropdownOpen, setSocialsDropdownOpen] = useState(false);
@@ -23,8 +24,8 @@ export function Navbar({ onOpenInquire }: NavbarProps) {
   const navLinks = [
     { label: 'Selected Works', href: '#projects' },
     { label: 'Capabilities', href: '#capabilities' },
-    { label: 'Philosophy', href: '#philosophy' },
-    { label: 'Impact Metrics', href: '#metrics' },
+    { label: 'Infinity Mandate', href: '#philosophy' },
+    { label: 'Founders [06]', href: '#founders' },
     { label: 'Socials', href: '#socials' },
   ];
 
@@ -39,23 +40,36 @@ export function Navbar({ onOpenInquire }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between gap-8">
           {/* Zone 1: Brand Wordmark with Monogram Lockup (Targeted Elements) */}
-          <a
-            href="#"
-            className="flex items-center gap-3.5 group whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black"
-            title="Zanaari Projects Limited — Home"
-          >
-            <ZanaariLogo
-              size={22}
-              strokeWidth={9}
-              className="text-[#0A0A0A] transition-transform duration-300 group-hover:scale-105"
-            />
-            <span className="font-['Syne'] font-bold text-sm sm:text-base tracking-[0.26em] text-[#0A0A0A] uppercase transition-colors group-hover:text-[#4B5563]">
-              ZANAARI PROJECTS
-            </span>
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="#"
+              className="flex items-center gap-3.5 group whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black"
+              title="Zanaari Projects Limited — Home"
+            >
+              <ZanaariLogo
+                size={22}
+                strokeWidth={9}
+                className="text-[#0A0A0A] transition-transform duration-300 group-hover:scale-105"
+              />
+              <span className="font-['Syne'] font-bold text-sm sm:text-base tracking-[0.26em] text-[#0A0A0A] uppercase transition-colors group-hover:text-[#4B5563]">
+                ZANAARI PROJECTS
+              </span>
+            </a>
+
+            {/* Quick Infinity Emblem Inspector Trigger */}
+            {onOpenLogoShowcase && (
+              <button
+                onClick={onOpenLogoShowcase}
+                className="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[9px] font-mono tracking-widest text-[#6B7280] hover:text-[#0A0A0A] border border-[#E5E7EB] hover:border-[#0A0A0A] transition-colors"
+                title="Inspect Infinity Architecture (∞)"
+              >
+                ∞ EMBLEM
+              </button>
+            )}
+          </div>
 
           {/* Zone 2: Navigation Links (Clean Single-Line Text, No Pills) */}
-          <nav className="hidden md:flex items-center gap-7 text-[11px] font-medium tracking-[0.2em] uppercase text-[#6B7280]">
+          <nav className="hidden md:flex items-center gap-6 text-[11px] font-medium tracking-[0.2em] uppercase text-[#6B7280]">
             {navLinks.map((link) => (
               <a
                 key={link.href}

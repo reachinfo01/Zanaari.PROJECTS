@@ -150,17 +150,17 @@ export function Footer() {
               </li>
               <li>
                 <a href="#philosophy" className="hover:text-white hover:underline transition-colors">
-                  03. Philosophy & Mandate
+                  03. The Infinity Mandate
                 </a>
               </li>
               <li>
-                <a href="#metrics" className="hover:text-white hover:underline transition-colors">
-                  04. Impact Indicators
+                <a href="#founders" className="hover:text-white hover:underline transition-colors">
+                  04. The Six Founders (Directorate)
                 </a>
               </li>
               <li>
                 <a href="#socials" className="hover:text-white hover:underline transition-colors">
-                  05. Socials & Channels
+                  05. Socials & Verified Channels
                 </a>
               </li>
               <li>
@@ -174,31 +174,15 @@ export function Footer() {
           {/* Col 2 & 3: Global Offices (6 cols) */}
           <div className="lg:col-span-6 space-y-4">
             <h3 className="text-[11px] font-mono tracking-[0.25em] uppercase text-white/50 mb-4">
-              GLOBAL OPERATING HUBS
+              OPERATING HUBS // NIGERIA HQ & DUBAI EXPANSION
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-white/80">
-              {/* London */}
-              <div className="space-y-1.5 p-3 bg-white/[0.03] border border-white/10">
+              {/* Lagos HQ */}
+              <div className="space-y-1.5 p-3 bg-white/[0.04] border border-white/20">
                 <div className="font-['Syne'] font-bold uppercase tracking-wider text-white text-sm">
-                  London
+                  Lagos, Nigeria
                 </div>
-                <div className="text-[10px] font-mono text-white/50">Mayfair Executive</div>
-                <p className="text-white/70 text-[11px] leading-relaxed">
-                  14 Berkeley Street, Mayfair
-                  <br />
-                  London W1J 8DX, UK
-                </p>
-                <div className="font-mono text-[10px] text-white/60 pt-2">
-                  LON: {times.london || '--:--:--'}
-                </div>
-              </div>
-
-              {/* Lagos */}
-              <div className="space-y-1.5 p-3 bg-white/[0.03] border border-white/10">
-                <div className="font-['Syne'] font-bold uppercase tracking-wider text-white text-sm">
-                  Lagos
-                </div>
-                <div className="text-[10px] font-mono text-white/50">West Africa Hub</div>
+                <div className="text-[10px] font-mono text-emerald-400">Global Corporate HQ</div>
                 <p className="text-white/70 text-[11px] leading-relaxed">
                   22 Walter Carrington Cresc,
                   <br />
@@ -209,16 +193,32 @@ export function Footer() {
                 </div>
               </div>
 
-              {/* Dubai */}
-              <div className="space-y-1.5 p-3 bg-white/[0.03] border border-white/10">
+              {/* Abuja Directorate */}
+              <div className="space-y-1.5 p-3 bg-white/[0.04] border border-white/20">
                 <div className="font-['Syne'] font-bold uppercase tracking-wider text-white text-sm">
-                  Dubai
+                  Abuja, Nigeria
                 </div>
-                <div className="text-[10px] font-mono text-white/50">GCC Corridor</div>
+                <div className="text-[10px] font-mono text-white/50">FCT Directorate</div>
                 <p className="text-white/70 text-[11px] leading-relaxed">
-                  Gate Precinct 4, Level 5,
+                  Central Business District,
                   <br />
-                  DIFC, Dubai, UAE
+                  Abuja FCT, Nigeria
+                </p>
+                <div className="font-mono text-[10px] text-white/60 pt-2">
+                  ABJ: {times.lagos || '--:--:--'}
+                </div>
+              </div>
+
+              {/* Dubai Expansion */}
+              <div className="space-y-1.5 p-3 bg-white/[0.04] border border-white/20">
+                <div className="font-['Syne'] font-bold uppercase tracking-wider text-white text-sm">
+                  Dubai, UAE
+                </div>
+                <div className="text-[10px] font-mono text-white/50">Strategic Expansion Hub</div>
+                <p className="text-white/70 text-[11px] leading-relaxed">
+                  Gate Precinct 4, DIFC
+                  <br />
+                  & Downtown Dubai, UAE
                 </p>
                 <div className="font-mono text-[10px] text-white/60 pt-2">
                   DXB: {times.dubai || '--:--:--'}

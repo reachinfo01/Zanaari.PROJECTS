@@ -12,8 +12,8 @@ export function InquirySection({ initialProjectScope = '' }: InquirySectionProps
     email: '',
     organization: '',
     projectScope: initialProjectScope || 'Commercial High-Rise',
-    budgetTier: '$50M - $150M',
-    location: 'London & UK',
+    budgetTier: '₦75B - ₦250B',
+    location: 'Nigeria (Lagos & Abuja Axis)',
     message: '',
   });
 
@@ -26,10 +26,10 @@ export function InquirySection({ initialProjectScope = '' }: InquirySectionProps
   } | null>(null);
 
   const budgetTiers = [
-    { id: '$10M - $50M', label: '$10M – $50M', desc: 'Bespoke Development' },
-    { id: '$50M - $150M', label: '$50M – $150M', desc: 'Signature Commercial' },
-    { id: '$150M - $500M', label: '$150M – $500M', desc: 'Major Infrastructure / Hub' },
-    { id: '$500M+', label: '$500M+', desc: 'Masterplanned Consortia' },
+    { id: '₦15B - ₦75B', label: '₦15B – ₦75B', desc: 'Bespoke Development (NGN)' },
+    { id: '₦75B - ₦250B', label: '₦75B – ₦250B', desc: 'Signature Infrastructure (NGN)' },
+    { id: '₦250B - ₦750B', label: '₦250B – ₦750B', desc: 'Intermodal Freight Hub / PPP' },
+    { id: '₦750B+', label: '₦750B+', desc: 'Sovereign Consortia & Cities' },
   ];
 
   const projectScopes = [
@@ -41,10 +41,10 @@ export function InquirySection({ initialProjectScope = '' }: InquirySectionProps
   ];
 
   const locations = [
-    'London & UK Corridor',
-    'Lagos & West Africa Coastal',
-    'Dubai & GCC Region',
-    'North America & Global',
+    'Nigeria (Lagos & Abuja Axis)',
+    'Dubai & GCC Corridor (Expansion)',
+    'West Africa Maritime Free Zone',
+    'International / United Kingdom',
   ];
 
   const validate = () => {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Project } from '../types/portfolio';
 import { ArrowUpRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,7 +12,8 @@ interface ProjectCardProps {
 export function ProjectCard({ project, onSelect, aspectClass = 'aspect-[4/3]' }: ProjectCardProps) {
   const [imgError, setImgError] = useState(false);
 
-  const imgSrc = imgError ? project.fallbackImage : project.imageSrc;
+  const rawSrc = imgError ? project.fallbackImage : project.imageSrc;
+  const imgSrc = getAssetUrl(rawSrc);
 
   return (
     <article

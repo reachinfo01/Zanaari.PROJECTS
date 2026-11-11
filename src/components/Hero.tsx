@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowDown, Maximize2 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 interface HeroProps {
   onExploreClick: () => void;
@@ -10,9 +11,10 @@ export function Hero({ onExploreClick }: HeroProps) {
   const [isZoomed, setIsZoomed] = useState(false);
 
   // Modular path as requested with local asset fallback
-  const heroImagePath = imgError
-    ? '/src/assets/images/hero_architectural_cinematic_1794393268619.jpg'
-    : '/assets/projects/hero-cover.jpg';
+  const rawPath = imgError
+    ? 'src/assets/images/hero_architectural_cinematic_1794393268619.jpg'
+    : 'assets/projects/hero-cover.jpg';
+  const heroImagePath = getAssetUrl(rawPath);
 
   return (
     <section className="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden border-b border-[#E5E7EB]">
@@ -24,10 +26,10 @@ export function Hero({ onExploreClick }: HeroProps) {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6 sm:mb-8 text-[11px] font-medium tracking-[0.25em] text-[#6B7280] uppercase">
           <div className="flex items-center gap-2">
             <span className="text-[#0A0A0A] font-bold">—</span>
-            <span>ARCHITECTURE • INFRASTRUCTURE • CAPITAL</span>
+            <span>ARCHITECTURE • INFRASTRUCTURE • CAPITAL // NIGERIA HQ</span>
           </div>
           <div className="flex items-center gap-4 font-mono text-[10px] text-[#6B7280]">
-            <span className="hidden sm:inline">51°30'26"N 0°07'39"W</span>
+            <span className="hidden sm:inline">6°26'15"N 3°25'00"E // LAGOS • DUBAI • ABUJA</span>
             <span className="text-[#0A0A0A] font-semibold tracking-widest">[ 2026 INDEX — 01 ]</span>
           </div>
         </div>
@@ -40,7 +42,7 @@ export function Hero({ onExploreClick }: HeroProps) {
           </h1>
           <p className="mt-6 text-base sm:text-lg text-[#4B5563] max-w-2xl font-light leading-relaxed">
             Zanaari Projects Limited conceives, engineers, and delivers monumental commercial, industrial, 
-            and civic infrastructure. Commissioned across the United Kingdom, Sub-Saharan Africa, and the Gulf.
+            and civic infrastructure. Founded and headquartered in Nigeria, scaling across Dubai and global corridors.
           </p>
         </div>
 
@@ -58,7 +60,7 @@ export function Hero({ onExploreClick }: HeroProps) {
           </button>
 
           <div className="flex items-center gap-6 text-[11px] text-[#6B7280] tracking-[0.18em] uppercase font-mono">
-            <span>PORTFOLIO VALUATION: $450M+</span>
+            <span className="font-bold text-[#0A0A0A]">PORTFOLIO VALUATION: ₦720B+</span>
             <span className="hidden md:inline">·</span>
             <span className="hidden md:inline">TIER-1 CIVIC COVENANTS</span>
           </div>
