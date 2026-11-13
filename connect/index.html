@@ -2,297 +2,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111111">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f6f2">
+<title>ZANAARI PROJECT LIMITED | Connect</title>
+<meta name="description" content="Connect with ZANAARI PROJECT LIMITED — design, development and construction.">
 
-  <title>ZANAARI PROJECTS | Connect</title>
-  <meta name="description" content="Connect with Zanaari Projects — design, construction and project development.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  background: #f7f6f2;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  padding: 25px 18px;
+}
 
-    body {
-      background: #f4f2ed;
-      color: #171717;
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      padding: 28px 18px;
-    }
+.page { max-width: 460px; margin: auto; }
 
-    .page {
-      width: 100%;
-      max-width: 470px;
-      margin: 0 auto;
-    }
+.brand {
+  text-align: center;
+  padding: 28px 0 35px;
+}
 
-    header {
-      text-align: center;
-      padding: 30px 12px 25px;
-    }
+.logo-mark {
+  display: block;
+  width: 190px;
+  height: 112px;
+  margin: 0 auto 18px;
+}
 
-    .mark {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 20px;
-    }
+.brand-name {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 9px;
+  padding-left: 9px;
+  line-height: 1.2;
+}
 
-    .brand {
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: 5px;
-    }
+.brand-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+}
 
-    .sub-brand {
-      font-size: 10px;
-      letter-spacing: 6px;
-      margin-top: 7px;
-      color: #777;
-    }
+.brand-subtitle::before,
+.brand-subtitle::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: #171717;
+}
 
-    .tagline {
-      font-size: 13px;
-      color: #666;
-      margin-top: 25px;
-      line-height: 1.6;
-    }
+.tagline {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #777;
+  margin-top: 23px;
+}
 
-    .intro {
-      text-align: center;
-      margin: 18px 0 25px;
-    }
+.intro { text-align: center; margin: 15px 0 30px; }
+.intro h1 { font-size: 18px; letter-spacing: 2px; margin-bottom: 10px; }
+.intro p { font-size: 12px; color: #777; line-height: 1.8; }
 
-    .intro h1 {
-      font-size: 19px;
-      font-weight: 600;
-      margin-bottom: 9px;
-    }
+.section-label {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  color: #888;
+  margin: 25px 0 12px;
+  font-weight: bold;
+}
 
-    .intro p {
-      font-size: 12px;
-      line-height: 1.7;
-      color: #777;
-    }
+.links { display: grid; gap: 10px; }
 
-    .section-label {
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      color: #888;
-      margin: 28px 0 12px;
-      font-weight: 700;
-    }
+.link {
+  background: #fff;
+  border: 1px solid #e7e4dd;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 600;
+  transition: .2s ease;
+}
 
-    .links {
-      display: grid;
-      gap: 10px;
-    }
+.link:hover { background: #171717; color: #fff; }
+.arrow { font-size: 17px; }
 
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-decoration: none;
-      color: #171717;
-      background: #fff;
-      border: 1px solid #e8e5de;
-      padding: 17px 18px;
-      min-height: 59px;
-      transition: .2s ease;
-    }
+.contact {
+  background: #171717;
+  color: #fff;
+  padding: 25px;
+  margin-top: 30px;
+}
 
-    .link:hover {
-      background: #171717;
-      color: #fff;
-      border-color: #171717;
-      transform: translateY(-2px);
-    }
+.contact h2 { font-size: 15px; margin-bottom: 12px; }
 
-    .link span:first-child {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: .3px;
-    }
+.contact p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 20px;
+}
 
-    .arrow {
-      font-size: 17px;
-      opacity: .6;
-    }
+.whatsapp {
+  display: block;
+  background: #f7f6f2;
+  color: #171717;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-    .contact {
-      background: #171717;
-      color: #fff;
-      padding: 23px;
-      margin-top: 28px;
-    }
+.save {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 11px;
+  background: transparent;
+  color: white;
+  border: 1px solid #777;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
-    .contact h2 {
-      font-size: 13px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
+footer {
+  text-align: center;
+  padding: 32px 5px 15px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #999;
+  line-height: 2;
+}
 
-    .contact p {
-      font-size: 11px;
-      color: #c3c3c3;
-      line-height: 1.7;
-      margin-bottom: 17px;
-    }
-
-    .contact a {
-      display: block;
-      text-align: center;
-      background: #f4f2ed;
-      color: #171717;
-      text-decoration: none;
-      padding: 14px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .save {
-      width: 100%;
-      margin-top: 10px;
-      background: transparent;
-      color: #fff;
-      border: 1px solid #777;
-      padding: 13px;
-      cursor: pointer;
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 10px 12px;
-      color: #999;
-      font-size: 9px;
-      letter-spacing: 1.5px;
-      line-height: 2;
-    }
-
-    @media (max-width: 360px) {
-      .brand {
-        font-size: 21px;
-      }
-    }
-  </style>
+@media (max-width: 360px) {
+  .brand-name { font-size: 30px; letter-spacing: 7px; }
+  .logo-mark { width: 165px; height: 98px; }
+  .brand-subtitle { font-size: 11px; letter-spacing: 4px; }
+}
+</style>
 </head>
 
 <body>
-  <main class="page">
+<main class="page">
 
-    <header>
-      <svg class="mark" viewBox="0 0 100 100" fill="none"
-           xmlns="http://www.w3.org/2000/svg" aria-label="Zanaari mark">
-        <path d="M20 25H80L20 75H80"
-              stroke="#171717" stroke-width="7"
-              stroke-linecap="square" stroke-linejoin="miter"/>
-      </svg>
+<header class="brand">
 
-      <div class="brand">ZANAARI</div>
-      <div class="sub-brand">PROJECTS</div>
+  <!-- ZANAARI ORIGINAL-STYLE GEOMETRIC MARK -->
+  <svg class="logo-mark" viewBox="0 0 320 190"
+       xmlns="http://www.w3.org/2000/svg"
+       role="img" aria-label="ZANAARI geometric logo">
+    <g fill="none" stroke="#000" stroke-width="12"
+       stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M20 42 V20 H102 L158 72"/>
+      <path d="M20 126 V148 H108 L238 20 H300 V42"/>
+      <path d="M177 103 L222 148 H300 V126"/>
+    </g>
+  </svg>
 
-      <p class="tagline">
-        Every vision deserves a foundation.<br>
-        Every ambition, a beginning.
-      </p>
-    </header>
+  <div class="brand-name">ZANAARI</div>
+  <div class="brand-subtitle">PROJECT LIMITED</div>
 
-    <section class="intro">
-      <h1>Connect with us.</h1>
-      <p>
-        Design. Development. Construction.<br>
-        Building ideas into reality.
-      </p>
-    </section>
+  <p class="tagline">
+    Every vision deserves a foundation.<br>
+    Every ambition, a beginning.
+  </p>
 
-    <div class="section-label">OUR DIGITAL PRESENCE</div>
+</header>
 
-    <section class="links">
-      <a class="link" href="https://reachinfo01.github.io/Zanaari.PROJECTS/" target="_blank" rel="noopener">
-        <span>Official Website</span><span class="arrow">↗</span>
-      </a>
+<section class="intro">
+  <h1>CONNECT WITH US</h1>
+  <p>
+    Design. Development. Construction.<br>
+    Building ideas into reality.
+  </p>
+</section>
 
-      <a class="link" href="https://www.instagram.com/zanaari.projects/" target="_blank" rel="noopener">
-        <span>Instagram</span><span class="arrow">↗</span>
-      </a>
+<div class="section-label">OUR DIGITAL PRESENCE</div>
 
-      <a class="link" href="https://www.tiktok.com/@zanaari.projects" target="_blank" rel="noopener">
-        <span>TikTok</span><span class="arrow">↗</span>
-      </a>
+<section class="links">
 
-      <a class="link" href="https://www.snapchat.com/add/zanaari" target="_blank" rel="noopener">
-        <span>Snapchat</span><span class="arrow">↗</span>
-      </a>
+  <a class="link" href="https://reachinfo01.github.io/Zanaari.PROJECTS/">
+    <span>Official Website</span><span class="arrow">↗</span>
+  </a>
 
-      <a class="link" href="mailto:reachzanaari@gmail.com">
-        <span>Email</span><span class="arrow">↗</span>
-      </a>
-    </section>
+  <a class="link" href="https://www.instagram.com/zanaari.projects/"
+     target="_blank" rel="noopener noreferrer">
+    <span>Instagram</span><span class="arrow">↗</span>
+  </a>
 
-    <div class="section-label">LET'S BUILD SOMETHING</div>
+  <a class="link" href="https://www.tiktok.com/@zanaari.projects"
+     target="_blank" rel="noopener noreferrer">
+    <span>TikTok</span><span class="arrow">↗</span>
+  </a>
 
-    <section class="contact">
-      <h2>Have a project in mind?</h2>
-      <p>
-        For enquiries, collaborations, project discussions
-        and business opportunities, get in touch with our team.
-      </p>
+  <a class="link" href="https://www.snapchat.com/add/zanaari"
+     target="_blank" rel="noopener noreferrer">
+    <span>Snapchat</span><span class="arrow">↗</span>
+  </a>
 
-      <a href="https://wa.me/2349061737940?text=Hello%20Zanaari%20Projects%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-         target="_blank" rel="noopener">
-        CONTACT US ON WHATSAPP
-      </a>
+  <a class="link" href="mailto:reachzanaari@gmail.com">
+    <span>Email</span><span class="arrow">↗</span>
+  </a>
 
-      <button class="save" onclick="saveContact()">
-        SAVE CONTACT
-      </button>
-    </section>
+</section>
 
-    <footer>
-      ZANAARI PROJECTS<br>
-      DESIGNING POSSIBILITIES. BUILDING THE FUTURE.
-      <br><br>
-      © <span id="year"></span> ZANAARI PROJECTS
-    </footer>
+<div class="section-label">LET'S BUILD SOMETHING</div>
 
-  </main>
+<section class="contact">
+  <h2>Have a project in mind?</h2>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+  <p>
+    For enquiries, collaborations, project discussions
+    and business opportunities, connect with us.
+  </p>
 
-    function saveContact() {
-      const contact = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "FN:Zanaari Projects",
-        "ORG:Zanaari Projects",
-        "TEL;TYPE=CELL:+2349061737940",
-        "EMAIL:reachzanaari@gmail.com",
-        "URL:https://reachinfo01.github.io/Zanaari.PROJECTS/",
-        "END:VCARD"
-      ].join("\r\n");
+  <a class="whatsapp"
+     href="https://wa.me/2349061737940?text=Hello%20ZANAARI%20PROJECT%20LIMITED%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+     target="_blank" rel="noopener noreferrer">
+    CONTACT US ON WHATSAPP
+  </a>
 
-      const blob = new Blob([contact], {
-        type: "text/vcard;charset=utf-8"
-      });
+  <button class="save" type="button" onclick="saveContact()">
+    SAVE CONTACT
+  </button>
+</section>
 
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
+<footer>
+  ZANAARI PROJECT LIMITED<br>
+  DESIGNING POSSIBILITIES. BUILDING THE FUTURE.
+  <br><br>
+  © <span id="year"></span> ZANAARI PROJECT LIMITED
+</footer>
 
-      link.href = url;
-      link.download = "Zanaari-Projects.vcf";
-      link.click();
+</main>
 
-      URL.revokeObjectURL(url);
-    }
-  </script>
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+function saveContact() {
+  const data = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:ZANAARI PROJECT LIMITED",
+    "ORG:ZANAARI PROJECT LIMITED",
+    "TEL;TYPE=CELL:+2349061737940",
+    "EMAIL:reachzanaari@gmail.com",
+    "URL:https://reachinfo01.github.io/Zanaari.PROJECTS/",
+    "END:VCARD"
+  ].join("\r\n");
+
+  const blob = new Blob([data], {
+    type: "text/vcard;charset=utf-8"
+  });
+
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "ZANAARI-PROJECT-LIMITED.vcf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+</script>
+
 </body>
 </html>
-
